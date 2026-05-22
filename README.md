@@ -267,12 +267,7 @@ Preencha os campos para obter a CHAVE DA API.
 OBS: Os campos podem ser preenchidos com dados ficticios.
 
 <img width="1257" height="947" alt="3" src="https://github.com/user-attachments/assets/3e61f11c-e7c6-4720-bd24-d4e3d9674d19" />
-Cole a CHAVE no campo:
-```bash
-API_KEY_ALPHA=sua_chave_alpha_vantage
-```
-do arquivo .env
-
+Cole a CHAVE no campo: API_KEY_ALPHA=sua_chave_alpha_vantage do arquivo .env
 
 
 `ViaCepService.java`
