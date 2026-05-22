@@ -89,11 +89,11 @@ public class DatabaseConnection {
     private static void updateClienteTable(Connection conn) throws SQLException {
         try (Statement stmt = conn.createStatement()) {
             if (!columnExists(conn, "cliente", "rua")) {
-                stmt.executeUpdate("ALTER TABLE cliente ADD COLUMN rua VARCHAR(150) NOT NULL DEFAULT ''");
+                stmt.executeUpdate("ALTER TABLE cliente ADD COLUMN rua VARCHAR(150) NOT NULL DEFAULT 'Nao informado'");
             }
 
             if (!columnExists(conn, "cliente", "cidade")) {
-                stmt.executeUpdate("ALTER TABLE cliente ADD COLUMN cidade VARCHAR(100) NOT NULL DEFAULT ''");
+                stmt.executeUpdate("ALTER TABLE cliente ADD COLUMN cidade VARCHAR(100) NOT NULL DEFAULT 'Nao informado'");
             }
         }
     }

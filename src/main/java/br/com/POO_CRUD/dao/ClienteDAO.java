@@ -35,9 +35,10 @@ public class ClienteDAO {
             stmt.setString(5, cliente.getCidade());
             stmt.executeUpdate();
 
-            ResultSet rs = stmt.getGeneratedKeys();
-            if (rs.next()) {
-                cliente.setId(rs.getInt(1));
+            try (ResultSet rs = stmt.getGeneratedKeys()) {
+                if (rs.next()) {
+                    cliente.setId(rs.getInt(1));
+                }
             }
             System.out.println("Cliente cadastrado com sucesso!");
 
